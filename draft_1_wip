@@ -1,0 +1,27 @@
+function compactFragments(fragmentsArray) {
+  let fixedArray = []
+  for (let i of fragmentsArray) {
+    if (i === undefined) {
+      console.log(`[COMPACTED]`)
+    } else {
+      fixedArray.push(i)
+    }
+  }
+  return fixedArray
+}
+
+let compactedShuffledFragments = compactFragments(shuffledFragments)
+
+function sortFragments(compactedArray) {
+  let currentId = 1
+  let sortedArray = []
+  for (let i = 0; i < compactedArray.length; i++) {
+    for (let j of compactedArray) {
+      if (j[id] == currentId)
+      sortedArray.push(j)
+    }
+    currentId++
+  }
+}
+
+let sortedFragments = sortFragments(compactedShuffledFragments)
